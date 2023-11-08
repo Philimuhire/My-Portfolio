@@ -74,18 +74,18 @@ body {
     font-size: 2rem;
     color: white;
   }
-  .know-me, .resume-head{
+  .know-me, .resume-head, .contact-head{
     margin-top: 10px;
     color: white;
     text-align: center;
     font-size: 20px;
   }
-  .know-me hr, .resume-head hr {
+  .know-me hr, .resume-head hr, .contact-head hr {
     border: none;
     border-top: 2px solid #0dc484;
     width: 20%;
   }
-  .know-me span, .resume-head span{
+  .know-me span, .resume-head span, .contact-head span{
     display: block;
     color: whitesmoke;
     font-size: 50px;
@@ -288,6 +288,79 @@ body {
     line-height: 20px;
     transition: width 0.5s ease-in-out;
   }
+
+  .contact-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 100px;
+    gap: 50px;
+  }
+
+  .contact-form {
+    margin-top: 20px;
+    flex: 1;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form h2 {
+  font-size: 24px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+form-group textarea {
+  resize: vertical;
+}
+
+button[type="submit"] {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.contact-info {
+  margin-top: 20px;
+  flex: 1;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.contact-info h2 {
+  font-size: 24px;
+}
+
+.contact-info p {
+  font-size: 18px;
+  margin: 15px 0;
+}
+
 
 
 
