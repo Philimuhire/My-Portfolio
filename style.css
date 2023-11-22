@@ -45,6 +45,18 @@ body {
     color: #007BFF;
   }
 
+  #profession {
+    color: #007BFF;
+    white-space: nowrap; /* Prevent line breaks */
+    overflow: hidden; /* Hide overflowing content */ 
+    animation: marquee 5s linear infinite; /* Marquee animation */ 
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
 .hero {
     background-image:  url('img/my-photo.jpg');
     background-size: auto;
