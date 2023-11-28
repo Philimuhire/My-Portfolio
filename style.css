@@ -87,22 +87,33 @@ body {
     color: white;
   }
   .know-me, .resume-head, .contact-head, .portfolio-head{
+    width: 20%; 
+    margin: 0 auto;
+    overflow: hidden;
     margin-top: 10px;
     color: white;
     text-align: center;
     font-size: 20px;
   }
-  .know-me hr, .resume-head hr, .contact-head hr, .portfolio-head hr {
-    border: none;
-    border-top: 2px solid #0dc484;
-    width: 15%;
-  }
-  .know-me span, .resume-head span, .contact-head span, .portfolio-head hr{
+
+  .know-me span, .resume-head span, .contact-head span, .portfolio-head span{
     display: block;
     color: whitesmoke;
     font-size: 30px;
     font-weight: bold;
   }
+
+  .about-marquee, .resume-marquee, .portfolio-marquee, .contact-marquee {
+    white-space: nowrap;
+    overflow: hidden;
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
   .description {
     display: flex;
     align-items: center;
@@ -134,9 +145,15 @@ body {
     color: rgb(170, 166, 166);
     font-size: 18px;
   }
-  .about-content p span{
+  .about-content p a{
+    text-decoration: none;
     color: #0dc484;
-  }
+}
+
+.about-content p a:hover{
+    text-decoration: underline;
+}
+
   .about-content button {
     background-color: #0d5e42;
     color: white;
@@ -150,6 +167,11 @@ body {
   .about-content button:hover {
     background-color: #164e8a;
   }
+
+  .about-content button a {
+    color: #fff; 
+    text-decoration: none; 
+}
   .services-title {
     text-align: left;
     margin-top: 20px;
@@ -378,7 +400,7 @@ button[type="submit"] {
 .portfolio-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
+  gap: 10px;
   margin: 20px;
 }
 
@@ -388,15 +410,15 @@ button[type="submit"] {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.portfolio-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 5px;
-}
-
 .portfolio-item:hover {
   transform: scale(1.05);
+}
+
+.portfolio-item img {
+  max-height: 200px;
+  width: auto; 
+  display: block; 
+  margin: 0 auto;
 }
 
 
